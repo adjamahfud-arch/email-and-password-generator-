@@ -1,5 +1,6 @@
 import pytest
-from main_program import Start,Process
+from main_program import Start,To_hash,Hash_in
+
 @pytest.fixture
 def test_masuk():
     return (
@@ -7,9 +8,9 @@ def test_masuk():
     )
 
 def test_ada(test_masuk):
-   nama =Process()
-   nama.tambah(test_masuk)
-   assert len(nama.data_base) == 9
-   assert len(nama.data_base) == 9
-  
+   nama =To_hash()
+   nama.tambah_hash(test_masuk)
+   assert len(nama.data_hash) == 0
+
+
   
